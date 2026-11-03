@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Akshuna &amp; Darrpan — Wedding Reception</title>
+  
+  <!-- Royal Wedding Fonts -->
+  <!-- Royal Wedding Typography Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient Audio Track -->
+  <audio id="bg-music" src="assets/music.m4a" loop preload="auto"></audio>
+
+  <!-- 🌸 3D Interactive Falling Petals & Gold Stardust Canvas -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- ✉️ 1. UNIFIED IMAGE GATEFOLD ENVELOPE (seal-bg.jpg) -->
+  <div id="envelope-overlay">
+    <div class="flap flap-left"></div>
+    <div class="flap flap-right"></div>
+    <div class="flap flap-top"></div>
+    <div class="flap flap-bottom"></div>
+
+    <!-- Tap Target with Pure Text & Directional Arrow -->
+    <div id="wax-seal-container" title="Tap to Open">
+      <div class="seal-tap-target">
+        <p class="seal-tap-text">TAP TO UNVEIL</p>
+        <svg class="seal-tap-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M7 10l5 5 5-5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📜 MAIN INVITATION CONTAINER -->
+  <main class="invitation-container" id="invitation-card">
+
+    <!-- 🏰 1. HERO ARCHWAY (arch-bg.jpg) -->
+    <header class="section hero-celestial">
+      <div class="hero-arch-content">
+        <p class="hero-preface">WITH HEARTS FULL OF GRATITUDE</p>
+        
+        <!-- 3-Line Vertical Stacked Names Structure -->
+        <div class="couple-typography-stacked">
+          <h1 class="calligraphy-name name-top">Akshuna</h1>
+          <span class="script-ampersand-stacked">&amp;</span>
+          <h1 class="calligraphy-name name-bottom">Darrpan</h1>
+        </div>
+
+        <p class="invitation-note">
+          Cordially invite you to celebrate<br> the joyous union at their
+        </p>
+        
+        <div class="reception-tag-wrapper">
+          <span class="reception-badge">WEDDING RECEPTION</span>
+        </div>
+
+        <p class="hero-date-stamp">SUNDAY, 20TH DECEMBER 2026 <br>NAGPUR</p>
+      </div>
+
+      <!-- Mobile-Safe Scroll Indicator -->
+      <div class="hero-scroll-indicator" id="scroll-guide">
+        <span class="guide-text">SCROLL TO CELEBRATE</span>
+        <svg class="guide-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M7 10l5 5 5-5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </header>
+
+    <!-- Compact Shimmer Seam Transition (Hero Arch -> Couple Story) -->
+    <div class="compact-shimmer-seam">
+      <div class="shimmer-core-line"></div>
+    </div>
+  
+    <!-- 💖 2. COUPLE STORY SECTION (bg9.jpg) -->
+    <section class="section couple-story-section">
+      <div class="together-frame-wrap">
+        <div class="royal-portrait-border">
+          <img src="assets/couple.jpg" alt="Akshuna & Darrpan" class="together-img" />
+        </div>
+      </div>
+
+      <div class="story-typography-wrap">
+        <h2 class="script-story-title">An Evening of<br> Grace,Music &amp; Joy</h2>
+        
+        <p class="story-body-prose">
+          Two lives united in sacred vows,<br> stepping together into tomorrow.
+          As the stars light up our first celebration as husband and wife,<br>
+          we invite you to join us for an evening of music, dining, and cherished company.
+        </p>
+
+        <p class="story-vows-prose">
+          Here’s to the warmth of family, the laughter of friends,<br> and the magic of new beginnings.
+        </p>
+      </div>
+    </section>
+
+    <!-- Compact Shimmer Seam Transition (Hero Arch -> Couple Story) -->
+     <div class="compact-shimmer-seam">
+      <div class="shimmer-core-line"></div>
+    </div>
+
+
+    <!-- 🌸 3. MEET BRIDE & GROOM PROFILES (bg5.jpg) -->
+    <section class="section profiles-section">
+      <h2 class="section-title bride-groom-title">THE BRIDE &amp; GROOM</h2>
+
+      <div class="profiles-grid">
+        <!-- Bride -->
+        <div class="profile-card">
+          <div class="profile-photo-wrapper">
+            <img src="assets/bride.jpeg" alt="Akshuna Sinha" class="profile-img bride-photo" />
+          </div>
+          <p class="person-role">THE BRIDE</p>
+          <h3 class="person-name">Akshuna Sinha</h3>
+          <p class="person-parents">
+            <span class="parent-prefix">Daughter of:</span><br>
+            Mrs. Kshama Ajit Sinha <br>
+            &amp; Mr. Ajit Kumar Sinha
+          </p>
+        </div>
+
+        <!-- Groom -->
+        <div class="profile-card">
+          <div class="profile-photo-wrapper">
+            <img src="assets/groom.jpeg" alt="Darrpan Shah" class="profile-img groom-photo" />
+          </div>
+          <p class="person-role">THE GROOM</p>
+          <h3 class="person-name">Darrpan Shah</h3>
+          <p class="person-parents">
+            <span class="parent-prefix">Son of:</span><br>
+            Smt. Savita Rohit Shah<br>
+            &amp; Late Mr. Rohit Dilipkumar Shah
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⚜️ 4. 3D CIRCULAR SCRATCH CARD REVEAL SECTION -->
+    <!-- Top Symmetric Lace Seam -->
+    <div class="royal-seam-block seam-top">
+      <svg class="gold-lace-strip inverted" viewBox="0 0 600 36" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#b68d2c" />
+            <stop offset="30%" stop-color="#ffe685" />
+            <stop offset="50%" stop-color="#ffffff" />
+            <stop offset="70%" stop-color="#ffe685" />
+            <stop offset="100%" stop-color="#b68d2c" />
+          </linearGradient>
+        </defs>
+        <path d="M0,0 L600,0 L600,6 L0,6 Z M0,10 L600,10 L600,12 L0,12 Z" fill="url(#goldGrad1)" />
+        <path d="M0,14 Q25,34 50,14 Q75,34 100,14 Q125,34 150,14 Q175,34 200,14 Q225,34 250,14 Q275,34 300,14 Q325,34 350,14 Q375,34 400,14 Q425,34 450,14 Q475,34 500,14 Q525,34 550,14 Q575,34 600,14" fill="none" stroke="url(#goldGrad1)" stroke-width="2" />
+      </svg>
+      <div class="mandala-badge">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="44" fill="#0d1b2a" stroke="url(#goldGrad1)" stroke-width="2.5" />
+          <circle cx="50" cy="50" r="39" fill="none" stroke="url(#goldGrad1)" stroke-width="1" stroke-dasharray="2,2" />
+          <text x="50" y="62" font-family="'Cinzel', serif" font-size="34" font-weight="700" fill="url(#goldGrad1)" text-anchor="middle">ॐ</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 🪙 3D Scratch Medallion Block -->
+    <section class="section scratch-reveal-section">
+      <p class="scratch-kicker">AN EXCLUSIVE INVITATION</p>
+      <h3 class="scratch-headline">Scratch To Reveal </h3>
+      <p class="scratch-subnote">Rub to unlock our celebration</p>
+
+      <div class="scratch-card-3d-wrapper">
+        <div class="scratch-medallion-container" id="scratch-container">
+          
+          <!-- Underlying Secret Details -->
+          <div class="scratch-secret-content">
+            <div class="secret-inner">
+              <span class="secret-icon">✨</span>
+              <p class="secret-label">YOU ARE INVITED</p>
+              <h4 class="secret-date">Sunday, 20 Dec 2026</h4>
+              <p class="secret-time">6:30 PM ONWARDS</p>
+              <div class="secret-divider"></div>
+              <p class="secret-venue-title">Dwarka Lawn</p>
+              <p class="secret-venue-loc">Wardha Road, Khapri, Nagpur</p>
+              <a href="https://maps.google.com/?q=Dwarka+Lawn+Wardha+Road+Khapri+Nagpur" target="_blank" rel="noopener noreferrer" class="secret-map-badge">
+                OPEN MAP ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Scratch Canvas Surface -->
+          <canvas id="scratch-canvas" class="scratch-canvas"></canvas>
+
+          <!-- 3D Gold Rim -->
+          <div class="medallion-3d-rim"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Symmetric Lace Seam -->
+    <div class="royal-seam-block seam-bottom">
+      <svg class="gold-lace-strip" viewBox="0 0 600 36" preserveAspectRatio="none">
+        <path d="M0,0 L600,0 L600,6 L0,6 Z M0,10 L600,10 L600,12 L0,12 Z" fill="url(#goldGrad1)" />
+        <path d="M0,14 Q25,34 50,14 Q75,34 100,14 Q125,34 150,14 Q175,34 200,14 Q225,34 250,14 Q275,34 300,14 Q325,34 350,14 Q375,34 400,14 Q425,34 450,14 Q475,34 500,14 Q525,34 550,14 Q575,34 600,14" fill="none" stroke="url(#goldGrad1)" stroke-width="2" />
+      </svg>
+      <div class="mandala-badge">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="44" fill="#0d1b2a" stroke="url(#goldGrad1)" stroke-width="2.5" />
+          <circle cx="50" cy="50" r="39" fill="none" stroke="url(#goldGrad1)" stroke-width="1" stroke-dasharray="2,2" />
+          <text x="50" y="62" font-family="'Cinzel', serif" font-size="34" font-weight="700" fill="url(#goldGrad1)" text-anchor="middle">ॐ</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 📍 5. WHEN & WHERE -->
+    <section class="section itinerary-section">
+      <p class="section-kicker">WHEN &amp; WHERE</p>
+      <h2 class="section-title">Our Celebration</h2>
+      <p class="celebration-date-tag">Sunday, 20th December 2026</p>
+
+      <div class="event-cards-stack">
+        <!-- Reception Card -->
+        <div class="event-card">
+          <div class="event-icon">🍸</div>
+          <div class="event-details">
+            <span class="time-label">EVENING COMMENCES: 6:30 PM ONWARDS</span>
+            <h4>The Wedding Reception</h4>
+            <p class="event-sub">Meet, greet, and shower blessings on the newlyweds</p>
+          </div>
+        </div>
+
+        <!-- Feast Card -->
+        <div class="event-card">
+          <div class="event-icon">🍽️</div>
+          <div class="event-details">
+            <span class="time-label">DINNER &amp; CHEER: 7:30 PM ONWARDS</span>
+            <h4>Celebratory Royal Feast</h4>
+            <p class="event-sub">An indulgent evening spread of curated delicacies</p>
+          </div>
+        </div>
+
+        <!-- Venue Card -->
+        <div class="event-card venue-highlight-card">
+          <div class="event-icon">📍</div>
+          <div class="event-details">
+            <span class="time-label">VENUE</span>
+            <h4>Dwarka Lawn, Wardha Road</h4>
+            <p class="venue-address">Khapri, Nagpur, Maharashtra</p>
+            <a href="https://maps.google.com/?q=Dwarka+Lawn+Wardha+Road+Khapri+Nagpur" target="_blank" rel="noopener noreferrer" class="btn-directions-link">
+              Get Directions ➔
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a id="calendar-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-celestial">
+        <span>ADD RECEPTION TO GOOGLE CALENDAR</span>
+      </a>
+    </section>
+
+    <!-- ✨ 6. CASCADING GOLD DUST STARDUST CANOPY (footer-bg.jpg) -->
+    <div class="glitter-canopy-seam">
+      <svg class="glitter-dust-svg" viewBox="0 0 1000 60" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="dustGold" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="40%" stop-color="#ffd56b" stop-opacity="0.9" />
+            <stop offset="100%" stop-color="#0d1b2a" stop-opacity="0" />
+          </linearGradient>
+          <g id="sparkle">
+            <path d="M0,-7 Q0,-1 6,0 Q0,1 0,7 Q0,1 -6,0 Q0,-1 0,-7 Z" fill="#ffffff" />
+          </g>
+        </defs>
+        <rect x="0" y="0" width="1000" height="2" fill="url(#dustGold)" />
+        <g fill="url(#dustGold)">
+          <circle cx="25" cy="5" r="1.2" class="glimmer-micro g1" /><circle cx="85" cy="12" r="1.5" class="glimmer-micro g2" />
+          <circle cx="160" cy="8" r="1.7" class="glimmer-micro g3" /><circle cx="240" cy="18" r="1.2" class="glimmer-micro g4" />
+          <circle cx="340" cy="10" r="1.6" class="glimmer-micro g1" /><circle cx="450" cy="22" r="1.4" class="glimmer-micro g2" />
+          <circle cx="560" cy="9" r="1.8" class="glimmer-micro g3" /><circle cx="670" cy="20" r="1.3" class="glimmer-micro g4" />
+          <circle cx="780" cy="11" r="1.5" class="glimmer-micro g1" /><circle cx="890" cy="17" r="1.2" class="glimmer-micro g2" />
+          <circle cx="960" cy="7" r="1.6" class="glimmer-micro g3" />
+        </g>
+        <g>
+          <use href="#sparkle" x="80" y="14" class="fixed-star s-a" />
+          <use href="#sparkle" x="250" y="18" class="fixed-star s-b" />
+          <use href="#sparkle" x="480" y="15" class="fixed-star s-c" />
+          <use href="#sparkle" x="720" y="19" class="fixed-star s-a" />
+          <use href="#sparkle" x="910" y="12" class="fixed-star s-b" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- 💌 7. WITH LOVE / FOOTER (footer-bg.jpg) -->
+    <footer class="section footer-celestial">
+      <p class="footer-kicker">WITH LOVE</p>
+      <h3 class="footer-headline">Come Bless Our Journey</h3>
+      <p class="footer-blessing-text">
+        Your presence, warm wishes, and blessings<br> are the finest gifts we could ever ask for.<br>
+        Bring your warmest smiles, best stories, and <br>dance moves as we raise a toast to our new beginning.
+      </p>
+      <p class="family-signoff">
+        <span>With warmest regards &amp; affection,</span><br>
+        <strong>The Sinha &amp; Shah Families</strong>
+      </p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
