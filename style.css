@@ -273,6 +273,10 @@ html, body {
   transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  white-space: nowrap !important;
+  width: max-content !important;
+  max-width: 90vw;
   gap: 6px;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
@@ -287,10 +291,11 @@ html, body {
 
 .guide-text {
   font-family: var(--font-serif-display);
-  font-size: 0.62rem;
-  letter-spacing: 2px;
+  font-size: clamp(0.56rem, 2vw, 0.66rem) !important;
+  letter-spacing: 1.5px !important;
   font-weight: 700;
   color: var(--royal-blue);
+  white-space: nowrap !important;
 }
 
 .guide-arrow {
