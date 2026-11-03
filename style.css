@@ -399,14 +399,19 @@ html, body {
 }
 
 .profiles-section .bride-groom-title {
-  font-family: var(--font-serif-display) !important;
-  font-size: clamp(2.4rem, 8.5vw, 2rem) !important;
-  font-weight: 500 !important;
-  text-transform: none !important;
-  letter-spacing: 1px !important;
-  color: var(--royal-blue) !important;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9) !important;
-  margin: 0 auto clamp(26px, 5vh, 38px) !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  font-family: var(--font-serif-display), 'Cinzel', serif !important;
+  font-size: clamp(1.15rem, 5.2vw, 1.85rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: clamp(1px, 0.5vw, 2.5px) !important;
+  text-transform: uppercase !important;
+  color: var(--royal-blue, #0b1e36) !important;
+  line-height: 1.2 !important;
+  margin: 0 auto clamp(24px, 5vh, 36px) !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9) !important;
 }
 
 .profiles-grid {
