@@ -474,17 +474,32 @@ html, body {
 }
 
 .person-parents {
-  font-family: var(--font-serif-body) !important;
-  font-size: clamp(0.92rem, 3.3vw, 1.04rem) !important;
-  color: var(--navy-text-subtle) !important;
+ display: inline-block !important;
+  font-family: var(--font-serif-body), 'Playfair Display', serif !important;
+  font-size: clamp(0.92rem, 3.4vw, 1.05rem) !important;
+  font-weight: 600 !important;
+  color: #081729 !important; /* Deepest Royal Navy for maximum contrast */
   line-height: 1.6 !important;
+  
+  /* Soft frosted translucent pill to fade behind busy florals */
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  padding: 6px 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(197, 155, 39, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(11, 30, 54, 0.08) !important;
+  margin-top: 4px !important;
 }
 
 .parent-prefix {
-  font-family: var(--font-cursive-names) !important;
-  font-size: 1.08rem !important;
+  font-family: var(--font-cursive-names), 'Dancing Script', cursive !important;
+  font-size: 1.05rem !important;
   font-style: italic !important;
-  color: var(--royal-gold) !important;
+  font-weight: 700 !important;
+  color: #a47814 !important; /* Rich Antique Gold */
+  display: inline-block !important;
+  margin-bottom: 2px !important;
 }
 
 /* =========================================================
